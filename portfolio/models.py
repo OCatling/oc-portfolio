@@ -7,7 +7,7 @@ class Project(models.Model):
     # Descriptive
     title = models.CharField(max_length=250)
     description = models.TextField(blank=True)
-    image = models.ImageField(blank=True)
+    image = models.ImageField(upload_to='portfolio/media', blank=True)
 
     # Functional
     url = models.URLField(blank=True, null=True)
