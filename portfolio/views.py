@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.template import RequestContext
 from .models import Project
 
 # Create your views here.
