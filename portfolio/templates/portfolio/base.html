@@ -6,22 +6,28 @@
     {% load staticfiles %}
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/orkney" type="text/css"/>
     <link rel="stylesheet" media="screen" href="{% static 'portfolio/style/main.css' %}" type="text/css"/>
+    <script src="{% static 'portfolio/js/script.js' %}"></script>
 
 </head>
 <body>
+<div class="wrapper">
     <header>
-        <div class="wrapper">
             <div id="logo">
                 <h1>Oliver Catling</h1>
             </div>
             <nav>
-
+                <a href="">Contact</a>
             </nav>
-        </div>
+
     </header>
-    <div class="main">
+    <div class="main wrapper">
+        <div id="contact_form">
+            {% include "portfolio/contact.html" %}
+        </div>
         {% block content %}
         {% endblock %}
     </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 </html>

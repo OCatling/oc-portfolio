@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Project(models.Model):
@@ -20,9 +21,7 @@ class Project(models.Model):
 
     def get_absolute_url(self):
         """Return Objects Url"""
-
-        from django.core.urlresolvers import reverse
-        return reverse('project-detail', kwargs={"slug": self.slug, })
+        return reverse('portfolio', kwargs={"slug": self.slug, })
 
     def __str__(self):
         """Get String Value OF Class"""

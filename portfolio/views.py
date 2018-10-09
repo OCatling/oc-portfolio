@@ -1,12 +1,18 @@
 from django.shortcuts import render
-from django.template import RequestContext
 from .models import Project
-
-# Create your views here.
+from .forms import ContactForm
 
 
 def index(request):
     context = {
+        'form': ContactForm(),
         'projects': Project.objects.all(),
     }
     return render(request, 'portfolio/index.html', context)
+
+
+def contact_form_request(request):
+    context = {
+        'form': ContactForm(),
+    }
+    return render(request, 'portfolio/contact.html', context)
