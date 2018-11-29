@@ -7,6 +7,7 @@ class Project(models.Model):
 
     # Descriptive
     title = models.CharField(max_length=250)
+    tagline = models.CharField(max_length=250, blank=True)
     description = models.TextField(blank=True)
     image = models.ImageField(blank=True)
 
@@ -22,6 +23,9 @@ class Project(models.Model):
     def get_absolute_url(self):
         """Return Objects Url"""
         return reverse('portfolio:work', kwargs={"slug": self.slug, })
+
+    def snippet(self):
+        return self.description[:50] + '....'
 
     def __str__(self):
         """Get String Value OF Class"""
