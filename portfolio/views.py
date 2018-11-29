@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views import generic
 from .models import Project
 from .forms import ContactForm
 
@@ -11,8 +12,8 @@ def index(request):
     return render(request, 'portfolio/index.html', context)
 
 
-def contact_form_request(request):
+def work(request, slug):
     context = {
-        'form': ContactForm(),
+        'form': ContactForm
     }
-    return render(request, 'portfolio/contact.html', context)
+    return render(request, 'portfolio/work.html', context)

@@ -12,7 +12,7 @@ class Project(models.Model):
 
     # Functional
     url = models.URLField(blank=True, null=True)
-    slug = models.SlugField
+    slug = models.SlugField(unique=True)
     isLive = models.BooleanField(default=False)
 
     # Dates & Time
@@ -21,7 +21,7 @@ class Project(models.Model):
 
     def get_absolute_url(self):
         """Return Objects Url"""
-        return reverse('portfolio', kwargs={"slug": self.slug, })
+        return reverse('portfolio:work', kwargs={"slug": self.slug, })
 
     def __str__(self):
         """Get String Value OF Class"""
