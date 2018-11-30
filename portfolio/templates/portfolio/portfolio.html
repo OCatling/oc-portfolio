@@ -1,0 +1,22 @@
+<div class="projects">
+{% for p in projects %}
+    {% if p.isLive %}
+        <div class="project">
+            <div class="p-title">
+                <h3>{{ p.title }}</h3>
+            </div>
+            <div class="p-body">
+                {{ p.tagline }}
+            </div>
+            <div class="p-links">
+                {% if p.url %}
+                    <a class="inline-link" href="{{ p.url }}">View On GitHub</a>
+                {% endif %}
+                {% if p.description %}
+                    <a class="inline-link" href="{{ p.slug }}">Read More</a>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+</div>
