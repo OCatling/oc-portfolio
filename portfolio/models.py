@@ -37,6 +37,7 @@ class Page(models.Model):
 
     # Descriptive
     title = models.CharField(max_length=250)
+    tagline = models.CharField(max_length=250, blank=True)
     description = models.TextField(blank=True)
 
     # Functional
@@ -44,6 +45,7 @@ class Page(models.Model):
     slug = models.SlugField(unique=True)
     isLive = models.BooleanField(default=False)
     isInvert = models.BooleanField(default=False)
+    isTitleVisable = models.BooleanField(default=False)
 
     # Dates & Time
     publication_date = models.DateField(auto_now=True)

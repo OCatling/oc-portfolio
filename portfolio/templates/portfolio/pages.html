@@ -1,0 +1,19 @@
+{% for page in pages %}
+    {% if page.isInvert %}
+        <div class="page invert">
+    {% else %}
+        <div class="page">
+    {% endif %}
+            {% if page.isTitleVisable %}
+                <div class="title">
+                    <h2>{{ page.title }}</h2>
+                </div>
+            {% endif %}
+            <div class="headline">
+            <p>{{ page.tagline|linebreaks }}</p>
+            </div>
+            <div class="body">
+            <p> {{ page.description|linebreaks }} </p>
+            </div>
+        </div>
+{% endfor %}
