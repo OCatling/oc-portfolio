@@ -1,12 +1,13 @@
 from django.http import Http404
 from django.shortcuts import render
-from .models import Project
+from .models import Project, Page
 from .forms import ContactForm
 
 
 def index(request):
     context = {
         'form': ContactForm(),
+        'pages': Page.objects.all(),
         'projects': Project.objects.all(),
     }
     return render(request, 'portfolio/index.html', context)
