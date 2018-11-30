@@ -7,7 +7,6 @@
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/orkney" type="text/css"/>
     <link rel="stylesheet" media="screen" href="{% static 'portfolio/style/main.css' %}" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.3.2/jquery.sidebar.min.js"></script>
     <script src="{% static 'portfolio/js/script.js' %}"></script>
 </head>
 <body>
@@ -16,25 +15,11 @@
             <div id="logo">
                 <a href="{% url 'portfolio:home' %}"><h1>Oliver Catling</h1></a>
             </div>
-            {% include "portfolio/navigation.html" %}
         </header>
         <div class="main wrapper">
             {% block content %}
             {% endblock %}
         </div>
     </div>
-<div class="sidebars">
-    <div class="sidebar right">
-        <div id="contact_form">
-            {% include "portfolio/contact.html" %}
-        </div>
-    </div>
-    <div class="sidebar top">
-        <div id="about_section">
-            {% include "portfolio/about.html" %}
-        </div>
-    </div>
-
-</div>
 </body>
 </html>
