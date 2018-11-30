@@ -43,6 +43,7 @@ class Page(models.Model):
     url = models.URLField(blank=True, null=True)
     slug = models.SlugField(unique=True)
     isLive = models.BooleanField(default=False)
+    isInvert = models.BooleanField(default=False)
 
     # Dates & Time
     publication_date = models.DateField(auto_now=True)
