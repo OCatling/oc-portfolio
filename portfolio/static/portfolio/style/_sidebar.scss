@@ -1,0 +1,11 @@
+.sidebar{
+  height: 100vh;
+  right: 0;
+  width: 50%;
+}
+.sidebars > .sidebar {
+  background: #fff;
+  position: fixed;
+  padding: 30px;
+  font-size: 1em;
+}
