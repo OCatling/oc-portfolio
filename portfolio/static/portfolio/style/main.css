@@ -104,7 +104,6 @@ nav {
 }*/
 .main {
   left: 50%;
-  margin-top: 100vh;
   position: absolute;
   right: 40px; }
   @media (max-width: 599px) {
@@ -116,6 +115,9 @@ nav {
   @media (min-width: 900px) {
     .main {
       left: 50%; } }
+
+#block {
+  margin-top: 100vh; }
 
 /*-------------------------------------------------------> Pages */
 .invert {

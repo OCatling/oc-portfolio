@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oliver Catling | Java & Python Developer</title>
     {% load staticfiles %}
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/orkney" type="text/css"/>
@@ -10,13 +11,13 @@
     <script src="{% static 'portfolio/js/script.js' %}"></script>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="mwrapper">
         <header>
             <div id="logo">
                 <h1>Oliver Catling</h1>
             </div>
         </header>
-        <div class="main wrapper">
+        <div class="main">
             {% block content %}
             {% endblock %}
         </div>

@@ -7,12 +7,15 @@
 }*/
 .main{
   left: 50%;
-  margin-top: 100vh;
+  //margin-top: 100vh;
   position: absolute;
   right: 40px;
   @include for-phone-only{ left: 40px; }
   @include for-tablet-portrait-up{ left: 40px; }
   @include for-tablet-landscape-up { left: 50%; }
+}
+#block {
+  margin-top: 100vh;
 }
 /*-------------------------------------------------------> Pages */
 .invert{
